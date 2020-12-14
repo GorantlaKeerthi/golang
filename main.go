@@ -1,67 +1,75 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-	"strings"
-	"math"
-	"unicode"
-)
+import "training/main/work"
 
 func main() {
+	/*var s []int
+	for {
+		var a string
+		fmt.Println("if you want continue then press Y/y, to exit: q/Q ")
+		fmt.Scan(&a)
+		if a == "q" || a == "Q" {
+			break
 
-	/* truncate value 14.65478 to 2 precision points */
+		} else if a == "y" || a == "Y" {
+			var d int
+			fmt.Println("enter a number")
+			fmt.Scan(&d)
+			s = append(s, d)
+		}
 
-	b := 14.65478
-	fmt.Printf("after truncating the value is %.2f", b)
-	/*conversion of string into integer and float*/
-	v := "32"
-	if s, err := strconv.Atoi(v); err == nil {
-		fmt.Printf("\n %T, %v\n", s, s)
 	}
-	f := "32.56"
-	if a, err := strconv.ParseFloat(f, -1); err == nil {
-		fmt.Printf("\n %T, %v", a, a)
+	fmt.Println("slice values: ", s)
+	*/
+	/*var rows int
+	var k int = 0
+	fmt.Print("Enter number of rows :")
+	fmt.Scan(&rows)
+	for i := 1; i <= rows; i++ {
+		k = 0
+		for space := 1; space <= rows-i; space++ {
+			fmt.Print("  ")
+		}
+		for {
+			fmt.Print(" ", k, " ")
+			k++
+			if k == 2*i-1 {
+				break
+			}
+		}
+		fmt.Println("")
+	}*/
+	/*var rows int
+	var co int
+	var space int
+	var i int
+	var j int
+	fmt.Print("Enter the number of rows: ")
+	fmt.Scan(&rows)
+	for i = 0; i < rows; i++ {
+		for space = 1; space <= rows-i; space++ {
+			fmt.Print("  ")
+		}
+		for j = 0; j <= i; j++ {
+			if j == 0 || i == 0 {
+				co = 1
+			} else {
+				co = co * (i - j + 1) / j
+			}
+			fmt.Print(" ", co, " ")
+		}
+		fmt.Print("\n")
+	}*/
+
+	/* type employee struct {
+		EmployeeId   int
+		Employeename string
+		Age          int
+		Country      string
 	}
-	/*assignment-3 convert string into uppercase*/
-	str := "go-lang-training"
-
-	str1 := strings.ToUpper(str)
-	str2 := strings.Replace(str1, "-", " ", -1)
-
-	fmt.Printf("\nafter conversion:\n")
-	fmt.Printf(str2)
-	/*assignment-4 const declaration*/
-	const (
-		x = 6
-		y
-		z
-	)
-	fmt.Printf("\nconst\n")
-	fmt.Println(x)
-	fmt.Println(y)
-	fmt.Println(z)
-	/*assignment5- to modify the value of varible using pointers*/
-	va := 100
-	var ptr *int
-	ptr = &va
-	fmt.Printf("before changing the value and the address is")
-	fmt.Print(va)
-
-	*ptr = 200
-	fmt.Printf("\n after changing the value")
-	fmt.Print(va)
-
-/*assignment6 program to find the number of letters and numbers in a string*/
-	ip="1Ax3 7y Bk"
-	 dig =0
-	var j int =1
-	var sp int=0
-	var lc int =0
-	var up int =0
-	for i, c := range "1Ax3 7y Bk"{
-		if unicode.IsDigit(c)
-		incremnt(dig)
-	    fmt.Println(dig)
-	}
+	fmt.Println(employee{1100, "john", 25, "USA"}) */
+	work.Infiniteloop()
+	//work.Pyramid()
+	//work.Concat()
+	//work.Sort()
 }
